@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+		body {
+			margin: 0;
+		}
+		
+		.navbar {
+			background-color: white;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: left;
+			padding: 10px;
+		}
+		
+		.navbar img {
+			height: 40px;
+            margin-right: 50px;
+		}
+		
+		.navbar a {
+			color: #000000;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			display: inline-block;
+		}
+		
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+		
+		.active {
+			background-color: #4CAF50;
+			color: rgb(0, 0, 0);
+		}
+        .headline {
+			background-color: #333;
+			color: #fff;
+			padding: 30px;
+			text-align: center;
+		}
+		
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			padding: 30px;
+			background-color: #4d4d4d;            
+		}
+
+        .container {
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fade-in 1s ease-out forwards;
+        }
+		
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+		.content {
+			flex: 1;
+			margin-right: 50px;
+			text-align: justify;
+		}
+		
+		.image {
+			flex: 1;
+		}
+		
+		h1 {
+			font-size: 3em;
+			margin: 0;
+			line-height: 1.2em;
+			text-transform: uppercase;
+            color: white;
+		}
+		
+		.description {
+			font-size: 1.2em;
+			margin-top: 20px;
+			line-height: 1.5em;
+            color: white;
+		}
+		
+		.button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			transition: transform 0.3s ease-in-out;
+		}
+		
+		.button:hover {
+			transform: scale(1.1);
+		}
+
+        .grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(1, 300px);
+			grid-gap: 20px;
+			background-color: white;
+			padding: 30px;
+		}
+		
+		.image {
+			background-image: url('https://picsum.photos/500/500');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+        }
+
+	</style>
+</head>
+<body>
+
+    <!-- nav bar menu -->
+
+	<div class="navbar">
+		<img src="img/transferir.png" alt="Logo">
+		<a class="active" href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Servizi</a>
+	</div>
+
+    <!-- Header / hero / banner -->
+
+    <div class="container">
+		<div class="content">
+			<h1>Benvenuti alla nostra pagina web</h1>
+			<p class="description">Siamo una società specializzata in servizi digitali di alta qualità per le aziende di tutto il mondo.</p>
+			<button class="button">Scopri di più</button>
+			<button class="button">Accedi</button>
+			<button class="button">Contattaci</button>
+		</div>
+		<div class="image">
+			<img src="https://picsum.photos/500/500" alt="Immagine" width="500" height="500">
+		</div>
+	</div>
+
+    <!-- griglia -->
+
+	<div class="grid">
+		<div class="image"></div>
+		<div class="image"></div>
+		<div class="image"></div>
+		<div class="image"></div>
+	</div>
+
+</body>
+</html>
+
+
+
+
